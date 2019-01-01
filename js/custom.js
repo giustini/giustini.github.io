@@ -1,6 +1,10 @@
 (function ($) {
     'use-strict';
 
+    $(document).ready(function () {
+        $('.tooltipped').tooltip();
+    });
+
     $(window).on('load', function () {
         initPreloaderFade();
     });
