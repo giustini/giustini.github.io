@@ -1036,3 +1036,65 @@ textarea:hover:-ms-input-placeholder {
     -o-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
+
+/* ----- ----- ----- ----- ----- Header ----- ----- ----- ----- ----- */
+
+.header {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 111;
+    background: #ffffff;
+    padding: 0 50px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.header-visibile {
+    top: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+.header-hidden {
+    top: -60px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.site-header-title {
+    font-family: 'Dosis', 'Open Sans', 'Sans Serif' !important;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 42px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+.top-section {
+    text-align: center;
+}
+
+.top-section.top-section-home,
+.top-section.top-section-single {
+    height: 400px !important;
+}
+
+.parallax-section {
+    background-attachment: fixed !important;
+}
+
+.overlay-section {
+    width: 100%;
+    height: 100%;
+    padding: 150px 0;
+    background: rgba(12, 24, 36, 0.75);
+}
+
+.top-section.top-section-home .overlay-section {
+    padding: 0 !important;
+}
