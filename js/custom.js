@@ -3,28 +3,21 @@
 
     $(document).ready(function () {
         $('.tooltipped').tooltip();
+        $('.materialboxed').materialbox();
     });
 
     $(window).on('load', function () {
         initPreloaderFade();
     });
 
-    $(window).on('resize', function () {
-        initHeroHeight();
-        initPortfolioResize();
-    });
-
     $(window).on('scroll', function () {
         initHeaderAnimation();
     });
 
-    initHeroHeight();
     initParallax();
     initSectionHighlight();
     initImageBackground();
     initAnimateScroll();
-    initMagnificPopup();
-    initPortfolio();
     initMasonry();
     initProgressBar();
     initCarousel();
@@ -57,10 +50,6 @@
                 }
             });
         });
-    }
-
-    function initHeroHeight() {
-        $('.hero-height').height($(window).height());
     }
 
     function initParallax() {
@@ -102,76 +91,10 @@
         }
     }
 
-    function initMagnificPopup() {
-        $('.portrait-mfp').magnificPopup({
-            type: 'image',
-            gallery: {
-                enabled: true
-            }
-        });
-
-        $('.portfolio-mfp').magnificPopup({
-            type: 'image',
-            gallery: {
-                enabled: true
-            }
-        });
-
-        $(".video-mfp").magnificPopup({
-            type: 'iframe',
-            gallery: {
-                enabled: true
-            }
-        });
-    }
-
     function initMasonry() {
         $(".masonry").imagesLoaded(function () {
             $(".masonry").masonry();
         });
-    }
-
-    function initPortfolio() {
-        $('.portfolio-items').imagesLoaded(function () {
-            $('.portfolio-items').show();
-            $('.portfolio-items').isotope({
-                filter: '*',
-                layoutMode: 'masonry',
-                animationOptions: {
-                    duration: 750,
-                    easing: 'linear'
-                }
-            });
-        });
-
-        $('.filter').find('a').on('click', function () {
-            $('.portfolio-items').isotope({
-                filter: $(this).attr('data-filter'),
-                animationOptions: {
-                    duration: 750,
-                    queue: false
-                }
-            });
-            return false;
-        });
-
-        $('.filter a').on('click', function () {
-            if (!$(this).hasClass('active')) {
-                $('.filter a').removeClass('active');
-                $(this).addClass('active');
-            }
-        });
-    }
-
-    function initPortfolioResize() {
-        $('.portfolio-items').isotope({
-            filter: $('.filter').find('a.active').attr('data-filter'),
-            animationOptions: {
-                duration: 750,
-                queue: false
-            }
-        });
-        return false;
     }
 
     function initProgressBar() {
