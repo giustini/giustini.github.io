@@ -1,3 +1,27 @@
+@media only screen and (max-width: 1655px) {
+    .qualities-wrapper .w-block {
+        min-height: 270px;
+    }
+}
+
+@media only screen and (max-width: 1550px) {
+    .qualities-wrapper .w-block {
+        min-height: 330px;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .qualities-wrapper .w-block {
+        min-height: 380px;
+    }
+}
+
+@media only screen and (max-width: 1160px) {
+    .qualities-wrapper .w-block {
+        min-height: 512px;
+    }
+}
+
 @media only screen and (max-width: 992px) {
     .pd-md-40 {
         padding: 40px !important;
