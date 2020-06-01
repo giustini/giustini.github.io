@@ -1486,8 +1486,8 @@ textarea:hover:-ms-input-placeholder {
 .progress-bar {
     position: relative;
     overflow: hidden;
-    height: 5px;
-    background: #e6e6e6;
+    height: 3px;
+    background: #0EB57D;
     width: 100%;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
